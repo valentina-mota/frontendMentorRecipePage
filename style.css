@@ -1,0 +1,149 @@
+/*
+
+font-family: 'Outfit', sans-serif;
+font-family: 'Young Serif', serif;
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-p: hsl(30, 10%, 34%);
+    --clr-h1: hsl(24, 5%, 18%);
+    --clr-h2: #87413F;
+    --fsz-p: 1em;
+    --fsz-h1: 2rem;
+    --fsz-h2: 1.5rem;
+    --fwt-h1: 700;
+    --fwt-H2: 600;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #F3E5D7;
+    width: 100vw;
+    height: auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 60%;
+    height: auto;
+    background: #fff;
+    padding: 2rem 3rem;
+    border: 4px solid white;
+    border-radius: 20px;
+    margin-block: 3em;
+    gap: 2em;
+}
+
+h1, h2 {
+    font-family: 'Young Serif', serif;
+}
+
+h1 {
+    color: var(--clr-h1);
+    font-size: var(--fsz-h1);
+}
+
+h2 {
+    color: var(--clr-h2);
+    font-size: var(--fsz-h2);
+    margin-bottom: 1.1rem;
+}
+
+p {
+    font-family: 'Outfit', sans-serif;
+}
+
+.p-when-title {
+    font-size: 1.1rem;
+    color: var(--clr-h2);
+    font-weight: 600;
+}
+
+.container-img img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.container-preparation-time {
+    padding-left: 4rem;
+    line-height: 2;
+}
+
+.container-ingredients ul {
+    list-style: none;
+}
+
+.container-ingredients ul li::before {
+    content: "•";
+    color: var(--clr-h2);
+    display: inline-block;
+    width: 1em;
+    margin-left: 0em;
+    padding-right: 20px;
+}
+
+.container-ingredients ul li {
+    padding-block: .5rem;
+}
+
+.container-instructions span {
+    font-weight: 600;
+}
+
+.container-instructions ol {
+    list-style: none;
+    counter-reset: li;
+}
+
+.container-instructions ol li::before {
+    content: counter(li)".";
+    color: var(--clr-h2);
+    display: inline-block;
+    width: 1em;
+    padding-right: 1em;
+}
+
+.container-instructions ol li {
+    counter-increment: li;
+    padding-block: 1rem;
+}
+
+table {
+    margin-top: 3rem;
+}
+
+table td {
+    padding: 1rem 10rem 1rem 3rem;
+}
+
+.container-nutrition-table span {
+    color: var(--clr-h2);
+    font-weight: 600;
+}
+
+.attribution {
+    font-size: 11px; text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
